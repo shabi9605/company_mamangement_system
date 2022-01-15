@@ -1,0 +1,14 @@
+{% extends 'dashboard.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<h1>Experience Form</h1>
+<div style="padding-top: 1em;padding-bottom: 1em;padding-left: 2em;background-color: wheat;">
+<form action="" method="POST" style="padding-right: 2em;">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" value="Add Experience" style="margin-top: 1em;background-color: #1e6e66;color: white;">
+
+</form>
+</div>
+{% endblock %}

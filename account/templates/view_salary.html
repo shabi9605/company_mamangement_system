@@ -1,0 +1,45 @@
+{% extends 'dashboard.html' %}
+
+
+{% block content %}
+
+<div class="table-responsive table-shadow" style="background-color: bisque;">
+    
+    {% if salary %}
+    <table class="table">
+          <thead>
+            <tr>
+              <!-- <th scope="col">#</th> -->
+              <th scope="col">Employee</th>
+              <th scope="col">salary</th>
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+              {% for i in salary %}
+            <tr style="background-color: #d9a3a3;">
+
+              <td>{{ i.employee}}</td>
+              <td>{{ i.salary}} rs</td>
+              
+              
+
+
+             
+            </tr>
+
+            {% endfor %}
+
+          </tbody>
+
+    </table>
+    {% else %}
+
+    <span>No Salary can be found...</span>
+    {% endif %}
+
+</div>
+
+
+{% endblock %}
